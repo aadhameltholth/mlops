@@ -10,18 +10,14 @@ jobs:
     validate-and-test:
       runs-on: ubuntu-latest
       steps:                
-      
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
-            python-version: '3.10'
-            
-      - name: Install Dependencies
-        run: pip install -r requirements.txt
-    
+          python-version: '3.10'
+          
       - name: Linter Check
         uses : super-linter/super-linter@v7.1.0
       
       - name: Model Dry Test
         run: |
             python -c "import torch; print('Model environment ready!')"
+S
