@@ -6,7 +6,7 @@ on :
 
 jobs : 
   validate : 
-    run-on : ubuntu-latest
+    runs-on : ubuntu-latest
     steps : 
       - name : Step1
         uses : actions/setup-python@v5
