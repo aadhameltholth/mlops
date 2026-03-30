@@ -20,4 +20,4 @@ jobs :
       - uses : actions/Super-Litner-Check
       - name : Model Dry TEst 
       - run : | 
-        python - c "import torch; print("Model Environment REady")"
+        python - c "import torch; print('Model Environment Ready')"
