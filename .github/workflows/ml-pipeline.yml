@@ -1,20 +1,17 @@
-name : ML-Model-CLI
+name : TRy Again 
 
 on : 
   push : 
     branches : [main]
-  pull_request : 
-    branches : [main]
-  
+
 jobs : 
-  validate-and-test : 
-    runs-on : ubuntu-latest
+  validate : 
+    run-on : ubuntu-latest
     steps : 
-      - name : Set up Python
+      - name : Step1
         uses : actions/setup-python@v5
         with : 
-            python-version : '3.10'
+          python-version : '3.10'
       
-      - name : Model Dry TEst 
-        run : | 
-            python - c "import torch; print('Model Environment Ready')"
+      - name : Step2 
+        run : python -c "print('HEllo')" 
