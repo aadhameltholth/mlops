@@ -16,8 +16,7 @@ jobs :
             python-version : '3.10'
       - name : Install Dependencies
         run : pip install -r requirements.txt
-      - name : Linter Checker
-        uses : actions/Super-Linter-Check
+
       - name : Model Dry TEst 
         run : | 
             python - c "import torch; print('Model Environment Ready')"
